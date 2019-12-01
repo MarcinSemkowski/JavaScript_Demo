@@ -3,14 +3,38 @@
 <head>
 <meta charset="utf-8"/>    
     
+       <script type="text/javascript">
+    
+        function check(){
+         var integer = document.getElementById("field").value;  
+        
+            if(integer > 0){
+              document.getElementById("score").innerHTML="positive";     
+            }else if(integer < 0){
+             document.getElementById("score").innerHTML="negative"; 
+            }else if(integer === ""){
+                     document.getElementById("score").innerHTML="";
+            }
+            
+            
+            else if(integer == 0){
+                 document.getElementById("score").innerHTML="null"; 
+            }else{
+                document.getElementById("score").innerHTML="Please add number   ";
+            }
+                
+        }
+    
+    </script>
  
     
     </head>
-<body>
+<body >
     
     <input type="text" id="field" />
-    <input type="submit"  value="Sprawdź"/>
+    <input type="submit"  value="Sprawdź" onclick="check()"/>
     
+    <div id="score"></div>
     
     </body>
 
