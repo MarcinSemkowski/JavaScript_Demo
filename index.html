@@ -5,23 +5,8 @@
     
        <script type="text/javascript">
     
-        function check(){
-         var integer = document.getElementById("field").value;  
-        
-            if(integer > 0){
-              document.getElementById("score").innerHTML="positive";     
-            }else if(integer < 0){
-             document.getElementById("score").innerHTML="negative"; 
-            }else if(integer === ""){
-                     document.getElementById("score").innerHTML="";
-            }
-            
-            
-            else if(integer == 0){
-                 document.getElementById("score").innerHTML="null"; 
-            }else{
-                document.getElementById("score").innerHTML="Please add number   ";
-            }
+        function write(){
+         
                 
         }
     
@@ -31,8 +16,9 @@
     </head>
 <body >
     
-    <input type="text" id="field" />
-    <input type="submit"  value="Sprawdź" onclick="check()"/>
+    <input type="text" id="field1" />
+    <input type="text" id="field2" />
+    <input type="submit"  value="Sprawdź" onclick="write()"/>
     
     <div id="score"></div>
     
