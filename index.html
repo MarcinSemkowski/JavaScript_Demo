@@ -6,8 +6,14 @@
        <script type="text/javascript">
     
         function write(){
-         
-                
+         var number1 = document.getElementById("field1").value;
+         var number2 = document.getElementById("field2").value;
+         var caption = "";    
+            for(i=number1; i<=number2; i++){
+               caption = caption + i + " ";
+            }
+            
+         document.getElementById("score").innerHTML = caption;    
         }
     
     </script>
