@@ -1,0 +1,29 @@
+body{
+    background-color: #000000;
+    color: lightgray;
+    font-size: 28px;
+}
+
+#pojemnik{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+#board{
+    width: 900px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 48px;
+}
+#gibbet{
+ float: left;
+    width: 450px;
+    text-align: center;
+}
+#alphabet{
+    float: left;
+    width: 450px;
+    text-align: center;
+}
