@@ -16,11 +16,13 @@ body{
     margin-bottom: 50px;
     text-align: center;
     font-size: 48px;
+    min-height: 60px;
 }
 #gibbet{
  float: left;
     width: 450px;
     text-align: center;
+    min-height: 280px;
 }
 #alphabet{
     float: left;
