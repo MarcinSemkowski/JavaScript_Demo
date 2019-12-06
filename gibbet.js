@@ -15,6 +15,8 @@ for(i=0;i<length; i++)
 }
 
 
+
+
 function writeSentence(){
     
     document.getElementById("board").innerHTML = password1;
@@ -22,4 +24,13 @@ function writeSentence(){
     
 }
 
-window.onload = writeSentence;
+window.onload = start;
+
+
+function start(){
+var tresc_diva = ""; 
+document.getElementById("alphabet").innerHTML = "lolwut"; 
+
+writeSentence();    
+    
+}
