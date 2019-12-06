@@ -7,10 +7,10 @@ var password1 = "";
 
 for(i=0;i<length; i++)
 {
-    if(password1[i] == ""){
+    if(sentence.charAt(i) == " "){
         password1 = password1 + " ";
     }else{
-        password1 = password1 + "-";
+      password1 = password1 + "-";
     }
 }
 
