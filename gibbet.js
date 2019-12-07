@@ -28,8 +28,13 @@ window.onload = start;
 
 
 function start(){
-var tresc_diva = ""; 
-document.getElementById("alphabet").innerHTML = "lolwut"; 
+var tresc_diva = "";
+
+for(i =0; i <=34; i++){
+    tresc_diva = tresc_diva + '<div class="letter">A</div>';
+}    
+    
+document.getElementById("alphabet").innerHTML = tresc_diva; 
 
 writeSentence();    
     
