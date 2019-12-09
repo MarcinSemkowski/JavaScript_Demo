@@ -69,7 +69,8 @@ function start(){
 var tresc_diva = "";
 
 for(i =0; i <=34; i++){
-    tresc_diva = tresc_diva + '<div class="letter">'+ letters[i] +'</div>';
+    var element = "lit" + i;
+    tresc_diva = tresc_diva + '<div class="letter" id="'+ element +'" onclick="check('+i+')" >'+ letters[i] +'</div>';
     if(i +1 % 7 == 0){
          tresc_diva = tresc_diva + '<div style = "clear:both;"></div>';
     }
@@ -81,4 +82,13 @@ document.getElementById("alphabet").innerHTML = tresc_diva;
 
 writeSentence();    
     
+}
+
+
+function check(nr){
+for(i=0; i < length; i++){
+  if(sentence.charAt(i) == letters[nr]){
+      alert(i);
+  }  
+}    
 }
