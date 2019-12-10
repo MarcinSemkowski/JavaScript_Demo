@@ -1,16 +1,16 @@
 var sentence = "Bez pracy nie ma kołaczy";
+sentence = sentence.toUpperCase();
+var lengthSentence = sentence.length;
 
-var length = sentence.length;
-
-var password1 = "";
+var sentence1 = "";
 
 
-for(i=0;i<length; i++)
+for(i=0;i<lengthSentence; i++)
 {
     if(sentence.charAt(i) == " "){
-        password1 = password1 + " ";
+        sentence1 = sentence1 + " ";
     }else{
-      password1 = password1 + "-";
+      sentence1 = sentence1 + "-";
     }
 }
 
@@ -19,7 +19,7 @@ for(i=0;i<length; i++)
 
 function writeSentence(){
     
-    document.getElementById("board").innerHTML = password1;
+    document.getElementById("board").innerHTML = sentence1;
        
     
 }
@@ -70,7 +70,7 @@ var tresc_diva = "";
 
 for(i =0; i <=34; i++){
     var element = "lit" + i;
-    tresc_diva = tresc_diva + '<div class="letter" id="'+ element +'" onclick="check('+i+')" >'+ letters[i] +'</div>';
+    tresc_diva = tresc_diva + '<div class="letter" onclick="check('+i+')"  id="'+ element +'" >'+ letters[i] +'</div>';
     if(i +1 % 7 == 0){
          tresc_diva = tresc_diva + '<div style = "clear:both;"></div>';
     }
@@ -84,20 +84,43 @@ writeSentence();
     
 }
 
-String.prototype.setChar = function(position,char){
-    if(position > this.length -1){
-       return this.toString(); 
+
+function setCharacter(sentence,position,character){
+    if(position > sentence.length -1 ){
+        return sentence.toString();
     }else{
-        return this.substr(0,position) + char + this.substr(position+1);
+     return sentence.substr(0,position) + character + sentence.substr(position + 1);    
     }
 }
 
 
 
+
+
 function check(nr){
-for(i=0; i < length; i++){
+    
+var hit = false;
+    
+for(i=0; i < lengthSentence; i++){
   if(sentence.charAt(i) == letters[nr]){
-    password1 = password1.setChar(i,letters[nr])
-  }  
-}    
+    
+    sentence1 = sentence1.setCharacter(sentence,i,letters[nr]);
+      hit = true;
+  }
+}
+ if(hit == true){
+    var element = "lit" + nr;
+     document.getElementById(element).style.background ="#003300";
+     document.getElementById(element).style.color ="#00C000";
+     document.getElementById(element).style.border ="#3px solid #00C000";
+     document.getElementById(element).style.cursor ="default";
+     
+     writeSentence(); 
+ }else{
+     var element = "lit" + nr;
+     document.getElementById(element).style.background ="#330000";
+     document.getElementById(element).style.color ="#C00000";
+     document.getElementById(element).style.border ="#3px solid #C00000";
+     document.getElementById(element).style.cursor ="default";
+ }        
 }
