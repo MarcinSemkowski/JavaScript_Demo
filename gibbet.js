@@ -80,15 +80,24 @@ for(i =0; i <=34; i++){
     
 document.getElementById("alphabet").innerHTML = tresc_diva; 
 
-writeSentence();    
+writeSentence();     
     
 }
+
+String.prototype.setChar = function(position,char){
+    if(position > this.length -1){
+       return this.toString(); 
+    }else{
+        return this.substr(0,position) + char + this.substr(position+1);
+    }
+}
+
 
 
 function check(nr){
 for(i=0; i < length; i++){
   if(sentence.charAt(i) == letters[nr]){
-      alert(i);
+    password1 = password1.setChar(i,letters[nr])
   }  
 }    
 }
