@@ -4,6 +4,8 @@ var lengthSentence = sentence.length;
 var ile_skuch = 0; 
 var sentence1 = "";
 
+var yes = new Audio("yes.wav");
+var no = new Audio("no.wav");
 
 for(i=0;i<lengthSentence; i++)
 {
@@ -109,14 +111,15 @@ for(i=0; i < lengthSentence; i++){
   }
 }
  if(hit == true){
+     yes.play();
     var element = "lit" + nr;
      document.getElementById(element).style.background ="#003300";
      document.getElementById(element).style.color ="#00C000";
      document.getElementById(element).style.border ="#3px solid #00C000";
      document.getElementById(element).style.cursor ="default";
-     
      writeSentence(); 
  }else{
+     no.play();
      var element = "lit" + nr;
      document.getElementById(element).style.background ="#330000";
      document.getElementById(element).style.color ="#C00000";
