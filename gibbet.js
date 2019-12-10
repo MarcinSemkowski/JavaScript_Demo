@@ -1,7 +1,7 @@
 var sentence = "Bez pracy nie ma kołaczy";
 sentence = sentence.toUpperCase();
 var lengthSentence = sentence.length;
-
+var ile_skuch 
 var sentence1 = "";
 
 
@@ -85,13 +85,13 @@ writeSentence();
 }
 
 
-function setCharacter(sentence,position,character){
-    if(position > sentence.length -1 ){
-        return sentence.toString();
-    }else{
-     return sentence.substr(0,position) + character + sentence.substr(position + 1);    
-    }
+String.prototype.ustawZnak = function(miejsce, znak)
+{
+	if (miejsce > this.length - 1) return this.toString();
+	else return this.substr(0, miejsce) + znak + this.substr(miejsce+1);
 }
+
+
 
 
 
@@ -104,7 +104,7 @@ var hit = false;
 for(i=0; i < lengthSentence; i++){
   if(sentence.charAt(i) == letters[nr]){
     
-    sentence1 = sentence1.setCharacter(sentence,i,letters[nr]);
+    sentence1 = sentence1.ustawZnak(i,letters[nr]);
       hit = true;
   }
 }
