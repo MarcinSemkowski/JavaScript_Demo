@@ -126,11 +126,16 @@ for(i=0; i < lengthSentence; i++){
   ile_skuch++;
      var image = "img/s" + ile_skuch + ".jpg";
      document.getElementById("gibbet").innerHTML = '<img src="' + image + '" alt="" />';
+ 
  }  
     
 if(sentence == sentence1){
     document.getElementById("alphabet").innerHTML = "Tak Jest Podano Prawidłowe Hasło: " + sentence +  
         '<br/><br/> <span class="reset" onclick="location.reload()">Jescze Raz ? </span>';
-}    
+}
+    if(ile_skuch >= 9){
+        document.getElementById("alphabet").innerHTML = "Przegrana Prawidłowe Hasło: " + sentence +  
+        '<br/><br/> <span class="reset" onclick="location.reload()">Jescze Raz ? </span>';
+    }
     
 }
