@@ -1,7 +1,7 @@
 var sentence = "Bez pracy nie ma kołaczy";
 sentence = sentence.toUpperCase();
 var lengthSentence = sentence.length;
-var ile_skuch 
+var ile_skuch = 0; 
 var sentence1 = "";
 
 
@@ -122,5 +122,15 @@ for(i=0; i < lengthSentence; i++){
      document.getElementById(element).style.color ="#C00000";
      document.getElementById(element).style.border ="#3px solid #C00000";
      document.getElementById(element).style.cursor ="default";
- }        
+     document.getElementById(element).setAttribute("onclick",";");
+  ile_skuch++;
+     var image = "img/s" + ile_skuch + ".jpg";
+     document.getElementById("gibbet").innerHTML = '<img src="' + image + '" alt="" />';
+ }  
+    
+if(sentence == sentence1){
+    document.getElementById("alphabet").innerHTML = "Tak Jest Podano Prawidłowe Hasło: " + sentence +  
+        '<br/><br/> <span class="reset" onclick="location.reload()">Jescze Raz ? </span>';
+}    
+    
 }
