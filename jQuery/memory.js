@@ -48,7 +48,16 @@ function revealCard(nr){
     $('#c' + nr).addClass('cardA');
     $('#c' + nr).removeClass('card');
 
-    
+    if(oneVisible == false){
+        //first Card
+        oneVisible = true;
+        
+    }else{
+     //second Card
+        turnCounter++;
+        $('.score').html('Turn counter: ' + turnCounter);
+        oneVisible = false;
+    }
      
     
     
