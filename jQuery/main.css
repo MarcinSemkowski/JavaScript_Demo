@@ -46,6 +46,21 @@ text-align: center;
     text-align: center;
 }
 
+.cardA{
+    width: 125px;
+    height: 125px;
+    display: inline-block;
+    margin: 3px;
+    background-image: url(img/karta.png);
+     border: 4px solid #e9b64a;
+    border-radius: 4px;
+    cursor: default;
+  filter: brightness(100%);
+    transition: all .3s ease-in-out;
+}
+
+
+
 .card{
     width: 125px;
     height: 125px;
@@ -64,6 +79,7 @@ text-align: center;
     border: 4px solid #e9b64a;
     filter: brightness(100%);
 }
+
 
 
 .score{

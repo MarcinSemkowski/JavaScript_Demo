@@ -45,6 +45,11 @@ var turnCounter = 0;
 function revealCard(nr){
     var photo =  "url(img/" + cards[nr] + ")";
      $('#c' + nr).css('background-image', photo);
+    $('#c' + nr).addClass('cardA');
+    $('#c' + nr).removeClass('card');
+
+    
+     
     
     
 }
