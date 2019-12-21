@@ -56,7 +56,7 @@ function revealCard(nr){
     }else{
      //second Card
       if(cards[visible_num] == cards[nr]){
-          alert("yes")
+          hide2Cards(nr,visible_num);
       }else{
           alert("no");
       }
@@ -68,3 +68,11 @@ function revealCard(nr){
     
     
 }
+
+function hide2Cards(nr1,nr2){
+    $('#c' + nr1).css('opacity','0');
+    $('#c' + nr2).css('opacity','0');
+    
+}
+
+
