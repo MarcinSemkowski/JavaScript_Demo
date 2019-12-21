@@ -43,28 +43,37 @@ var turnCounter = 0;
 var visible_num = 0;
 
 function revealCard(nr){
-    var photo =  "url(img/" + cards[nr] + ")";
-     $('#c' + nr).css('background-image', photo);
-    $('#c' + nr).addClass('cardA');
-    $('#c' + nr).removeClass('card');
+    
+    var opacityValue = $('#c' + nr).css('opacity',);
+    
+    if(opacityValue !=0){
+   
+            var photo =  "url(img/" + cards[nr] + ")";
+         $('#c' + nr).css('background-image', photo);
+        $('#c' + nr).addClass('cardA');
+        $('#c' + nr).removeClass('card');
 
-    if(oneVisible == false){
-        //first Card
-       oneVisible = true;
-        visible_num = nr;
-        
-    }else{
-     //second Card
-      if(cards[visible_num] == cards[nr]){
-          hide2Cards(nr,visible_num);
-      }else{
-          alert("no");
-      }
-        turnCounter++;
-        $('.score').html('Turn counter: ' + turnCounter);
-        oneVisible = false;
+        if(oneVisible == false){
+            //first Card
+           oneVisible = true;
+            visible_num = nr;
+
+        }else{
+         //second Card
+          if(cards[visible_num] == cards[nr]){
+             setTimeout(function(){ hide2Cards(nr,visible_num) },750);
+
+          }else{
+              
+          }
+            turnCounter++;
+            $('.score').html('Turn counter: ' + turnCounter);
+            oneVisible = false;
+        }
+         
     }
-     
+    
+    
     
     
 }
