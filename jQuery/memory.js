@@ -40,7 +40,7 @@ c11.addEventListener("click",function() { revealCard(11); });
 
 var oneVisible = false;
 var turnCounter = 0;
-
+var visible_num = 0;
 
 function revealCard(nr){
     var photo =  "url(img/" + cards[nr] + ")";
@@ -50,10 +50,16 @@ function revealCard(nr){
 
     if(oneVisible == false){
         //first Card
-        oneVisible = true;
+       oneVisible = true;
+        visible_num = nr;
         
     }else{
      //second Card
+      if(cards[visible_num] == cards[nr]){
+          alert("yes")
+      }else{
+          alert("no");
+      }
         turnCounter++;
         $('.score').html('Turn counter: ' + turnCounter);
         oneVisible = false;
