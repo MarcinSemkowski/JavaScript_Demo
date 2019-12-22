@@ -41,8 +41,8 @@ c11.addEventListener("click",function() { revealCard(11); });
 var oneVisible = false;
 var turnCounter = 0;
 var visible_num = 0;
-
-lock = true;
+ var lock = true;
+ var pairsLeft = 6;
 
 function revealCard(nr){
     
@@ -64,7 +64,10 @@ function revealCard(nr){
          //second Card
           if(cards[visible_num] == cards[nr]){
              setTimeout(function(){ hide2Cards(nr,visible_num) },750);
-
+              pairsLeft--;
+              if(pairsLeft == 0){
+                  $('.board').html('<h1>You win<br> Done in ' + turnCounter + 'turns </h1>');
+              }
           }else{
                setTimeout(function(){ restore2Cards(nr,visible_num) },750);
           }
